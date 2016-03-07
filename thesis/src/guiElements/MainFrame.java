@@ -9,13 +9,15 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
+import menuItemActionListeners.ImportMenuItenActionListener;
+
 public class MainFrame extends JFrame{
 	private JFrame mainFrame;
 	private JMenuBar mainMenu;
 	
 	//menus
 	private JMenu newMenu;
-		private JMenuItem newMenuFirst;
+		private JMenuItem newMenuImport;
 	
 	public MainFrame() {
 		initFrame();
@@ -34,11 +36,15 @@ public class MainFrame extends JFrame{
 	public void initMainMenu(){
 		mainMenu = new JMenuBar();
 		newMenu = new JMenu("New Project");
-		newMenuFirst = new JMenuItem("Import from file");
-		//do menuitem stuffs here
-		newMenu.add(newMenuFirst);
+		newMenuImport = new JMenuItem("Import from file");
+		newMenuImport.addActionListener(new ImportMenuItenActionListener());
+		newMenu.add(newMenuImport);
+		
 		mainMenu.add(newMenu);
 		mainFrame.add(mainMenu,BorderLayout.NORTH);
 	}
+	
+	
+	
 
 }
