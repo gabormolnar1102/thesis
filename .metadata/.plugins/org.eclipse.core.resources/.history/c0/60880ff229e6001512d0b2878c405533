@@ -1,0 +1,29 @@
+package modules;
+import javax.swing.JButton;
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+
+
+public class FileBrowser extends JFrame{
+	JFrame frame;
+	JFileChooser fileChooser;
+	JButton openButton;
+	
+	  public FileBrowser(JFrame parent) {
+		  	this.frame = parent;
+		    fileChooser  = new JFileChooser();
+		    fileChooser.setDialogTitle("Browser");
+		    parent.getContentPane().add(fileChooser);
+		    parent.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		    fileChooser.setVisible(true);
+		    parent.pack();
+		    parent.setVisible(true);
+	  }
+	  
+	  public void openFile(){
+		  openButton = new JButton("Open file");
+		  Integer success = this.fileChooser.showOpenDialog(this);
+		  
+	  }
+
+}

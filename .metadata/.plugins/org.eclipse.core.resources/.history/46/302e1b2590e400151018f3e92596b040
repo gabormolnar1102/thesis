@@ -1,0 +1,7 @@
+package implementations;
+
+import interfaces.IMenuItemInterface;
+
+public class IMenuItemHandler extends IMenuItemInterface{
+
+}

@@ -1,0 +1,92 @@
+package menuItemActionListeners;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.KeyEvent;
+import java.awt.event.MouseEvent;
+
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.event.MenuEvent;
+
+import org.w3c.dom.events.EventTarget;
+import org.w3c.dom.views.AbstractView;
+
+import interfaces.IMenuItemActionListener;
+
+public class ImportMenuItenActionListener implements IMenuItemActionListener{
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+	}
+
+	@Override
+	public void menuCanceled(MenuEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void menuDeselected(MenuEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void menuSelected(MenuEvent e) {
+		JOptionPane.showMessageDialog(new JFrame(),
+			    "Eggs are not supposed to be green.");
+		
+	}
+
+	@Override
+	public void keyPressed(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void keyTyped(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		if (  Integer.parseInt(e.getSource().toString()) == MouseEvent.BUTTON1) {
+	    	JOptionPane.showMessageDialog(new JFrame(),
+				    "Eggs are not supposed to be green.");
+	}
+	}
+
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mousePressed(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+}

@@ -1,0 +1,32 @@
+package modules;
+import java.io.File;
+import java.io.FileFilter;
+
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+import javax.swing.filechooser.FileNameExtensionFilter;
+
+
+public class FileBrowser extends JFrame{
+
+	  public FileBrowser(JFrame parent) {
+		    JFileChooser fileChooser = new JFileChooser();
+		    fileChooser.setDialogTitle("Choose a file");
+		    parent.getContentPane().add(fileChooser);
+		    parent.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		    fileChooser.setVisible(true);
+		    parent.pack();
+		    parent.setVisible(true);
+		  }
+	  
+	  public void openFile(FileBrowser parent){
+		    FileFilter filter = new FileNameExtensionFilter("c files", "c");
+		    parent.addChoosableFileFilter(filter);
+
+		    int ret = parent.showDialog(null, "Open file");
+
+		    if (ret == JFileChooser.APPROVE_OPTION) {
+		      File file = parent.getSelectedFile();
+		      System.out.println(file);
+	  }
+}

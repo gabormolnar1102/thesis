@@ -9,6 +9,7 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
+import menuItemActionListeners.FromFieldMenuItemActionListener;
 import menuItemActionListeners.ImportMenuItenActionListener;
 
 public class MainFrame extends JFrame{
@@ -18,6 +19,7 @@ public class MainFrame extends JFrame{
 	//menus
 	private JMenu newMenu;
 		private JMenuItem newMenuImport;
+		private JMenuItem newMenuFromField;
 	
 	public MainFrame() {
 		initFrame();
@@ -36,8 +38,15 @@ public class MainFrame extends JFrame{
 	public void initMainMenu(){
 		mainMenu = new JMenuBar();
 		newMenu = new JMenu("New Project");
-		newMenuImport = new JMenuItem("Import from file");
-		newMenuImport.addActionListener(new ImportMenuItenActionListener());
+		
+		//from file
+		newMenuFromField = new JMenuItem("Import from file");
+		newMenuFromField.addActionListener(new ImportMenuItenActionListener(mainFrame));
+		newMenu.add(newMenuFromField);
+		
+		//from field area 
+		newMenuImport = new JMenuItem("Direkt from imput");
+		newMenuImport.addActionListener(new FromFieldMenuItemActionListener());
 		newMenu.add(newMenuImport);
 		
 		mainMenu.add(newMenu);

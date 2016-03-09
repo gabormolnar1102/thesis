@@ -1,0 +1,18 @@
+package implementations;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import interfaces.IMenuItemInterface;
+
+public class IMenuItemHandler extends IMenuItemInterface{
+	
+	ArrayList<String> menuItems;
+	
+	@Override
+	public IMenuItemHandler(List<String> menuItems){
+		this.menuItems = menuItems;
+	}
+	
+
+}
