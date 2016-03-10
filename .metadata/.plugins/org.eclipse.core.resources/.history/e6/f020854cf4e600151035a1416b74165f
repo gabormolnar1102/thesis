@@ -1,4 +1,6 @@
 package modules;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.File;
 
 import javax.swing.JButton;
@@ -7,13 +9,11 @@ import javax.swing.JFrame;
 
 
 public class FileBrowser extends JFrame{
-
-	private static final long serialVersionUID = -3079552785012971826L;
 	JFrame frame;
 	JFileChooser fileChooser;
 	JButton openButton;
 	String path="";
-	String fileStr;
+	String fileStr = "";
 	
 	  public FileBrowser(JFrame parent) {
 		  	this.frame = parent;
@@ -37,5 +37,6 @@ public class FileBrowser extends JFrame{
 		    
 		    parent.pack();
 		    parent.setVisible(true);
-	  }  
+	  }
+
 }

@@ -13,7 +13,7 @@ public class FileBrowser extends JFrame{
 	JFileChooser fileChooser;
 	JButton openButton;
 	String path="";
-	String fileStr;
+	public static String fileStr;
 	
 	  public FileBrowser(JFrame parent) {
 		  	this.frame = parent;
@@ -37,5 +37,10 @@ public class FileBrowser extends JFrame{
 		    
 		    parent.pack();
 		    parent.setVisible(true);
-	  }  
+	  }
+
+	  public static String getSelectedFileName(){
+		  return this.fileStr;
+	  }
+	  
 }

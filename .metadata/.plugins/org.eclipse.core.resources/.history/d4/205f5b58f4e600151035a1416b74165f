@@ -26,6 +26,7 @@ public class ImportMenuItenActionListener implements IMenuItemActionListener{
 	public void actionPerformed(ActionEvent e) {
 		if( e.MOUSE_EVENT_MASK == ActionEvent.MOUSE_EVENT_MASK ){
 			FileBrowser fb = new FileBrowser(new JFrame());
+			JFileChooser filechooser = fb.getChooser();
 		}
 		
 	}
