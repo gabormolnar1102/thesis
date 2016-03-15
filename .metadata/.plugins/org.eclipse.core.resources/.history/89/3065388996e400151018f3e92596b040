@@ -1,9 +1,0 @@
-package interfaces;
-
-import java.util.List;
-
-public interface IMenuItemActionListener extends ActionListener{
-
-	public void doMenuActions(){}
-
-}

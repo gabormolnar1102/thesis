@@ -1,0 +1,14 @@
+package modules;
+
+import javax.swing.JFrame;
+
+public class ManualInputPanel {
+	JFrame parent;
+	
+	
+	public ManualInputPanel(JFrame parent) {
+		
+	}
+	
+	
+}

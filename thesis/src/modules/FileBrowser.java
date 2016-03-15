@@ -37,5 +37,6 @@ public class FileBrowser extends JFrame{
 		    
 		    parent.pack();
 		    parent.setVisible(true);
+		    frame.dispose();
 	  }  
 }

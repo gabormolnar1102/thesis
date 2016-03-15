@@ -1,9 +1,0 @@
-package interfaces;
-
-import java.awt.event.ActionListener;
-import java.util.List;
-
-public interface IMenuItemActionListener extends MenuListener{
-
-
-}

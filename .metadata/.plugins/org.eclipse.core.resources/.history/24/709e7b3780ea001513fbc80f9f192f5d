@@ -1,0 +1,23 @@
+package modules;
+
+import javax.swing.JPanel;
+import javax.swing.JTabbedPane;
+
+public class ManualInputTab {
+	JTabbedPane mainPanel;
+	JPanel content;
+
+	
+	public ManualInputTab(JTabbedPane parent) {
+		this.mainPanel = parent;
+		initPanel();
+	}
+
+
+	private void initPanel() {
+		mainPanel = new JPanel();
+	}
+	
+	
+	
+}

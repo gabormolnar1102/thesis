@@ -1,8 +1,0 @@
-package interfaces;
-
-import javax.swing.event.MenuListener;
-
-public interface IMenuItemActionListener extends MenuListener{
-
-
-}

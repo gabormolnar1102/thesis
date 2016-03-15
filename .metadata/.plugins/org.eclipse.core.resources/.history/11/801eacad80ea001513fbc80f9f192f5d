@@ -1,0 +1,32 @@
+package modules;
+
+import java.awt.BorderLayout;
+
+import javax.swing.JPanel;
+import javax.swing.JTabbedPane;
+
+public class ManualInputTab {
+	JTabbedPane mainPanel;
+	JPanel content;
+	
+
+	
+	public ManualInputTab(JTabbedPane parent) {
+		mainPanel = parent;
+		initPanel();
+	}
+
+
+	private void initPanel() {
+		content = new JPanel();
+		
+		
+		
+		
+		
+		mainPanel.add(content, BorderLayout.CENTER);
+	}
+	
+	
+	
+}

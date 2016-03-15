@@ -3,19 +3,22 @@ package menuItemActionListeners;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
-
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
+import javax.swing.JTabbedPane;
 
 import interfaces.IMenuItemActionListener;
+import modules.ManualInputTab;
 
 public class FromFieldMenuItemActionListener implements IMenuItemActionListener {
+	public JTabbedPane parent;
 
+	public FromFieldMenuItemActionListener(JTabbedPane parent){
+		this.parent = parent;
+	}
+	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if( e.MOUSE_EVENT_MASK == ActionEvent.MOUSE_EVENT_MASK ){
-			JOptionPane.showMessageDialog(new JFrame(),
-				    "Nyilik meg a sarga rozsa.");
+			ManualInputTab mip = new ManualInputTab(parent);
 		}
 	}
 

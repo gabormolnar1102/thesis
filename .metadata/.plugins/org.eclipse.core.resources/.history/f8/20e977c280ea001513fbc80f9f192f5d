@@ -1,0 +1,33 @@
+package modules;
+
+import java.awt.BorderLayout;
+
+import javax.swing.JButton;
+import javax.swing.JPanel;
+import javax.swing.JTabbedPane;
+
+public class ManualInputTab {
+	JTabbedPane mainPanel;
+	JPanel content;
+	
+
+	
+	public ManualInputTab(JTabbedPane parent) {
+		mainPanel = parent;
+		initPanel();
+	}
+
+
+	private void initPanel() {
+		content = new JPanel();
+		content.add(new JButton("Almafa gombja"));
+		
+		
+		
+		
+		mainPanel.add(content, BorderLayout.CENTER);
+	}
+	
+	
+	
+}

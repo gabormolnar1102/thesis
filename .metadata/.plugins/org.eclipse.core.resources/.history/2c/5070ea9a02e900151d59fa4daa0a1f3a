@@ -1,0 +1,45 @@
+package modules;
+
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JViewport;
+
+public class ManualInputPopup extends JFrame{
+	String input;
+	JButton cancel;
+	JButton ok;
+	JFrame frame;
+	JTextArea inputfield;
+	JPanel buttonsPanel;
+	
+	
+	public ManualInputPopup(){
+		//init frame 
+		this.frame = new JFrame("Please write the input");
+		frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		frame.setLocationRelativeTo(null);
+		frame.setSize(new Dimension(600,800));
+		frame.setLayout(new BorderLayout());
+		
+		
+		//setButtons
+		this.cancel=new JButton("Cancel");
+		this.ok= new JButton("OK");
+		this.buttonsPanel = new JPanel();
+		this.buttonsPanel.add(this.ok);
+		this.buttonsPanel.add(this.cancel, BorderLayout.PAGE_END);
+
+		
+		
+		
+		setVisible(true);
+		pack();
+		dispose();
+	}
+	
+}
