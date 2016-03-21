@@ -1,0 +1,13 @@
+package interfaces;
+
+import java.util.List;
+
+public interface IEbnfInterface {
+
+	
+	
+	List<String> getRows(String text);
+
+
+	
+}

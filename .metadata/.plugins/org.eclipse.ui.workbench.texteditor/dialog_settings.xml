@@ -6,17 +6,21 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="pane" key="selection"/>
+		<item value="&apos;" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="&quot;"/>
+			<item value="&quot;expression = term  { (&quot;+&quot; | &quot;-&quot;) term} ."/>
 			<item value="pane"/>
 			<item value="parent"/>
 			<item value="mousePressed"/>
 		</list>
 		<list key="replacehistory">
+			<item value="&apos;"/>
+			<item value="\&quot;"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

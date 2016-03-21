@@ -1,0 +1,19 @@
+package interfaces;
+
+import java.util.List;
+import java.util.Map;
+
+public interface IEbnfInterface {
+
+	
+	
+	List<String> getRows(String text);
+
+	Map<String, List<String>> mapRulesList
+
+	Map<String, List<String>> mapRules(String text);<String> rules);
+
+
+
+	
+}

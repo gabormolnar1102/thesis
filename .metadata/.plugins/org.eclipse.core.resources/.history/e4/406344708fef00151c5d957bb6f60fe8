@@ -1,0 +1,7 @@
+package interfaces;
+
+import javax.swing.JButton;
+
+public class CustomButton extends JButton implements ICustomButtonInterface{
+
+}

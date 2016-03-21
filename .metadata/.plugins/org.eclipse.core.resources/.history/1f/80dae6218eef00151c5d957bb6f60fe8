@@ -1,0 +1,31 @@
+package modules;
+
+import java.io.BufferedReader;
+
+public class FileReader {
+	BufferedReader br;
+	String filename;
+	String content;
+	
+	public FileReader(String filename){
+		this.filename = filename;
+	}
+	
+	public String getContentFromFile(){
+		String content = null;
+		
+		try{
+			
+		} catch (Exception e){
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+		return content;
+	}
+	
+	
+	
+}

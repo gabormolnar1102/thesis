@@ -6,7 +6,7 @@ import java.awt.event.MouseEvent;
 import javax.swing.JTabbedPane;
 
 import interfaces.IMenuItemActionListener;
-import modules.ManualInputTab;
+import modules.ManualInput;
 
 public class FromFieldMenuItemActionListener implements IMenuItemActionListener {
 	public JTabbedPane parent;
@@ -18,7 +18,7 @@ public class FromFieldMenuItemActionListener implements IMenuItemActionListener 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if( e.MOUSE_EVENT_MASK == ActionEvent.MOUSE_EVENT_MASK ){
-			ManualInputTab mip = new ManualInputTab(parent);
+			ManualInput mip = new ManualInput(parent);
 		}
 	}
 

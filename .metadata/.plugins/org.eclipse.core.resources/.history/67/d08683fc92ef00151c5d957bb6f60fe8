@@ -1,0 +1,20 @@
+package guiElements;
+
+import implementations.CustomButton;
+
+public class CommitButton extends CustomButton{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public CommitButton(){
+		super();
+	}
+	@Override
+	public CommitButton(String name){
+		super(name);
+	}
+	
+}

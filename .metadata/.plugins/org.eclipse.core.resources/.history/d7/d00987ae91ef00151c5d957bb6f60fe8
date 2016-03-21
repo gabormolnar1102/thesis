@@ -1,0 +1,7 @@
+package guiElements;
+
+import implementations.CustomButton;
+
+public class CommitButton extends CustomButton{
+
+}
