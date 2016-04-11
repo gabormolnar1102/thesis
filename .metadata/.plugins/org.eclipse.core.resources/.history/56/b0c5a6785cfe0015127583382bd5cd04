@@ -1,0 +1,14 @@
+package interfaces;
+
+import java.util.List;
+import java.util.Map;
+
+public interface ISyntaxSimulation {
+	public Map<String,List<String>> getRules();
+	public Map<String, List<String>> getProductionRulesForNonTerminal(String nonTerminal);
+	public List<String> getNonTerminalsForRules(Map<String, List<String>>);
+	public void doSimulation();
+	public List<String> getNonTerminals();
+	public List<Map<String, List<String>>> getHistory(Integer index);
+	public Boolean needAlwaysBreak();
+}

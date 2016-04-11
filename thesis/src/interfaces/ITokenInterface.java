@@ -1,0 +1,13 @@
+package interfaces;
+
+public interface ITokenInterface {
+
+	public enum eTokenType{
+		NONTERMINAL, TERMINAL, DOTSEPARATOR
+	}
+	
+	public String getTokenName();
+	public void setTokenName(String tokenName);
+	public eTokenType getTokenType();
+	public void setTokentype(eTokenType type);
+}

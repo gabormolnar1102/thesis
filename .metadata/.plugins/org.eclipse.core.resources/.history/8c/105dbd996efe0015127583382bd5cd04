@@ -1,0 +1,118 @@
+package simulations;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import implementations.SyntaxSimulationAncestor;
+
+public class LR0Simulation extends SyntaxSimulationAncestor {
+	private List<String> nonTerminals;
+	private Map<String, List<String>> rules;
+	private List<Map<String, List<String>>> history = new ArrayList<Map<String, List<String>>>();
+	private List<Map<String, String>> canonicalsets = new ArrayList<Map<String, String>>();
+	private Boolean alwaysbreak;
+	private String activeSeparator = ".";
+	
+	
+	
+	public LR0Simulation() {	
+		//do InitStuffs
+	}
+
+	/*public List<String> getNonTerminalsForRules(Map<String, List<String>> grammar){
+		List<String> nonTerminals = new ArrayList<>();
+		nonTerminals.addAll(grammar.keySet());
+		return nonTerminals;
+	}
+	*/
+	
+	@Override
+	public Boolean isNonterminal(String nonTerminal){
+		return nonTerminals.contains(nonTerminal);
+	}
+
+	@Override
+	public Map<String, List<String>> getRules() {
+		return rules;
+	}
+
+	@Override
+	public List<String> getProductionRulesForNonTerminal(String nonTerminal) {
+		Map<String, List<String>> rules = getRules();
+		return rules.get(nonTerminal);
+	}
+
+	@Override
+	public List<String> getNonTerminals() {
+		return nonTerminals;
+	}
+
+	@Override
+	public Map<String, List<String>> getHistory(Integer index) {
+		return history.get(index);
+	}
+
+	@Override
+	public Boolean needAlwaysBreak() {
+		return alwaysbreak;
+	}
+	
+	@Override
+	public Boolean getAlwaysBeakr(){
+		return alwaysbreak;
+	}
+
+	@Override
+	public void setAlwaysbreak(Boolean alwaysbreak) {
+		this.alwaysbreak = alwaysbreak;
+	}
+	
+	@Override
+	public void addDots(Map<String, List<String>> rules){
+		for(String rhs : rules.keySet()){
+			for(String prod : rules.get(rhs)){
+				prod = activeSeparator + prod;
+			}
+		}
+	}
+	
+	public void closure(String lhs, String value){
+		Integer separatorIndex = value.indexOf(activeSeparator);
+		if(separatorIndex == value.length()-1){
+			//separator is at the end
+			if(!){
+				
+			}
+		}
+	}
+	
+	public void read(Integer setId, Integer prodId){
+		HashMap<String, List<String>> canon = (HashMap) canonicalsets.get(setId);
+		String lhs = (String) canon.keySet().iterator().next();
+		String value = canon.get(lhs).get(prodId);
+		closure(lhs, value);
+	}
+	
+	public String getNextSymbol(){
+		
+		return null;
+	}
+	
+	
+	public boolean isClosed(String prod){
+		Boolean result = false;
+		Integer index = prod.indexOf(activeSeparator);
+		return prod.length()-1 == index;
+	}
+	
+	@Override
+	public void doSimulation() {
+		Map<String, List<String>> rules = getRules();
+		addDots(rules);
+		
+	}
+
+
+}

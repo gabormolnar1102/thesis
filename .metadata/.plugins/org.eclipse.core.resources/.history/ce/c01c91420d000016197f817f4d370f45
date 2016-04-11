@@ -1,0 +1,24 @@
+package CompilerElements;
+
+import interfaces.ITokenInterface.eTokenType;
+
+public class TerminalToken extends Token {
+	@Override
+	public String getTokenName() {
+		return null;
+	}
+	
+	@Override
+	public void setTokenName() {	
+	}
+	
+	@Override
+	public eTokenType getTokenType() {
+		return null;
+	}
+	
+	@Override
+	public void setTokentype() {	
+	}
+
+}

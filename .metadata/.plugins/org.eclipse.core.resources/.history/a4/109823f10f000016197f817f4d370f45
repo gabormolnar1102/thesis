@@ -1,0 +1,20 @@
+package interfaces;
+
+import java.util.List;
+import java.util.Map;
+
+import CompilerElements.Token;
+
+public interface ISyntaxSimulation {
+	public Map<String,List<String>> getRules();
+	public List<String> getProductionRulesForNonTerminal(String nonTerminal);
+	public void doSimulation();
+	public List<Token> getNonTerminals();
+	public Map<Token, List<Token>> getHistory(Integer index);
+	public Boolean needAlwaysBreak();
+	Boolean isNonterminal(String nonTerminal);
+	List<Token> getNonTerminalsForRules();
+	Boolean getAlwaysBeakr();
+	void setAlwaysbreak(Boolean alwaysbreak);
+	void addDots(Map<Token, List<Token>> rules);
+}

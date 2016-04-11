@@ -1,0 +1,55 @@
+package CompilerElements;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import interfaces.ITokenInterface.eTokenType;
+
+public class NonTerminalToken extends Token {
+	private String tokenName;
+	private eTokenType type;
+	private List<List<Token>> alternatives;
+	
+	public NonTerminalToken() {
+		super();
+		alternatives = new ArrayList<List<Token>>();
+	}
+	
+	public NonTerminalToken(String name, eTokenType type, List<List<Token>> alternatives){
+		this.tokenName = name;
+		this.type = type;
+		this.alternatives = alternatives;
+	}
+	
+	@Override
+	public String getTokenName() {
+		return tokenName;
+	}
+	
+	@Override
+	public void setTokenName(String tokenName) {
+		this.tokenName = tokenName;
+	}
+	
+	@Override
+	public eTokenType getTokenType() {
+		return type;
+	}
+	
+	@Override
+	public void setTokentype(eTokenType type) {	
+		this.type = type;
+	}
+	
+	public void addAlternative(List<Token> alt){
+		alternatives.addA(alt);
+	}
+	
+	public List<List<Token>> getAlternative(Integer index){
+		return alternatives.get(index);
+	}
+	
+	public List<Token> getAlternatives(){
+		return alternatives;
+	}
+}

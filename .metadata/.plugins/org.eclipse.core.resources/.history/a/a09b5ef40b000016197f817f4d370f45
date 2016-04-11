@@ -1,0 +1,8 @@
+package CompilerElements;
+
+import interfaces.ITokenInterface.eTokenType;
+
+public class NonTerminalToken extends Token {
+	private String tokenName;
+	private eTokenType type;
+}

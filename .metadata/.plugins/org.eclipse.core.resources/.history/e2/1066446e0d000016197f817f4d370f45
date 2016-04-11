@@ -1,0 +1,10 @@
+package CompilerElements;
+
+import interfaces.ITokenInterface.eTokenType;
+
+public class TerminalToken extends Token {
+	private String tokenName;
+	private eTokenType type;
+	
+
+}

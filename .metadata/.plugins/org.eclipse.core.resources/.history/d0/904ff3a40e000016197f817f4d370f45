@@ -1,0 +1,27 @@
+package CompilerElements;
+
+import interfaces.ITokenInterface.eTokenType;
+
+public class DotToken extends Token{
+	private String tokenName;
+	private eTokenType type;
+	
+	@Override
+	public String getTokenName() {
+		return null;
+	}
+	
+	@Override
+	public void setTokenName(String tokenName) {
+	}
+	
+	@Override
+	public eTokenType getTokenType() {
+		return null;
+	}
+	
+	@Override
+	public void setTokentype(eTokenType type) {	
+	}
+
+}

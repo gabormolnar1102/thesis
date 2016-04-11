@@ -1,0 +1,56 @@
+package implementations;
+
+import java.util.List;
+import java.util.Map;
+
+import interfaces.ISyntaxSimulation;
+
+public class SyntaxSimulationAncestor implements ISyntaxSimulation {
+	private Map<String, List<String>> rules;
+	private List<Map<String, List<String>>> history;
+	private List<Map<String, List<String>>> canonicalsets;
+	
+	
+	
+	@Override
+	public Map<String, List<String>> getRules() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Map<String, List<String>> getProductionRulesForNonTerminal(String nonTerminal) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<String> getNonTerminalsForRule() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void doSimulation() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public List<String> getNonTerminals() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Map<String, List<String>>> getHistory(Integer index) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Boolean needAlwaysBreak() {
+		return null;
+	}
+
+}

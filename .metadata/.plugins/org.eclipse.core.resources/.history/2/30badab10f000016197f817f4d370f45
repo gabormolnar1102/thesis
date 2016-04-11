@@ -1,0 +1,119 @@
+package simulations;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+import CompilerElements.Token;
+import implementations.SyntaxSimulationAncestor;
+
+public class LR0Simulation extends SyntaxSimulationAncestor {
+	private Map<String, List<String>> rules;
+	private List<Map<Token, List<Token>>> history = new ArrayList<Map<Token, List<Token>>>();
+	private Set<Map<String, String>> canonicalSets = new HashSet<Map<String, String>>();
+	private Boolean alwaysbreak;
+	
+	
+	
+	public LR0Simulation() {	
+		//do InitStuffs
+	}
+
+	/*public List<String> getNonTerminalsForRules(Map<String, List<String>> grammar){
+		List<String> nonTerminals = new ArrayList<>();
+		nonTerminals.addAll(grammar.keySet());
+		return nonTerminals;
+	}
+	*/
+	
+
+	@Override
+	public Map<String, List<String>> getRules() {
+		return rules;
+	}
+
+	@Override
+	public List<String> getProductionRulesForNonTerminal(String nonTerminal) {
+		Map<String, List<String>> rules = getRules();
+		return rules.get(nonTerminal);
+	}
+
+	@Override
+	public Map<String, List<String>> getHistory(Integer index) {
+		return history.get(index);
+	}
+
+	@Override
+	public Boolean needAlwaysBreak() {
+		return alwaysbreak;
+	}
+	
+	@Override
+	public Boolean getAlwaysBeakr(){
+		return alwaysbreak;
+	}
+
+	@Override
+	public void setAlwaysbreak(Boolean alwaysbreak) {
+		this.alwaysbreak = alwaysbreak;
+	}
+	
+	@Override
+	public void addDots(Map<String, List<String>> rules){
+		for(String rhs : rules.keySet()){
+			for(String prod : rules.get(rhs)){
+				prod = activeSeparator + prod;
+			}
+		}
+	}
+	
+	public void closure(String lhs, String value){
+		Integer ind = value.indexOf(activeSeparator);
+		if(ind == value.length()-1){
+			Map<String, String> map = new HashMap<String, String>();
+			map.put(lhs, value);
+			canonicalSets.add(map);
+		} else {
+			movePoint(value);
+			String akarmi = Character.toString(value.charAt(ind));
+			if( nonTerminals.contains(akarmi) ){
+				addRulesToWorkSet();
+			}
+		}
+	}
+	
+	public void read(Integer setId, Integer prodId){
+		HashMap<String, List<String>> canon = (HashMap) workSets.get(setId);
+		String lhs = (String) canon.keySet().iterator().next();
+		String value = canon.get(lhs).get(prodId);
+		closure(lhs, value);
+	}
+
+	public String movePoint(String str){
+		Integer ind = str.indexOf(activeSeparator);
+		char cha = str.charAt(ind+1);
+		StringBuilder sb = new StringBuilder(str);
+		sb.setCharAt(ind, cha);
+		sb.setCharAt(ind+1,	activeSeparator.charAt(0));
+		return sb.toString();
+	}
+	
+	/*public boolean isClosed(String prod){
+		Boolean result = false;
+		Integer index = prod.indexOf(activeSeparator);
+		return prod.length()-1 == index;
+	}*/
+	
+	@Override
+	public void doSimulation() {
+		Map<String, List<String>> rules = getRules();
+		addDots(rules);
+		//init workset too
+		
+	}
+
+
+}

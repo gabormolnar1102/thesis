@@ -1,0 +1,9 @@
+package interfaces;
+
+public interface ITokenInterface {
+
+	public enum eTokenType{
+		NONTERMINAL, TERMINAL
+	}
+	
+}

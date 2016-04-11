@@ -1,0 +1,12 @@
+package CompilerElements;
+
+import interfaces.ITokenInterface;
+
+public class Tokens  implements ITokenInterface{
+	private String tokenName;
+	private eTokenType type;
+	
+	@Override
+	public String getName()
+	
+}
