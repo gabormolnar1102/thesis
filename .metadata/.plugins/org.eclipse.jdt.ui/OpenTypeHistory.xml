@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
 <typeInfo handle="=thesis/src&lt;interfaces{IMenuItemActionListener.java[IMenuItemActionListener" modifiers="513" timestamp="1457381838321"/>
+<typeInfo handle="=thesis/src&lt;interfaces{ISyntaxSimulation.java[ISyntaxSimulation" modifiers="513" timestamp="1459358107892"/>
+<typeInfo handle="=thesis/src&lt;implementations{SyntaxSimulationAncestor.java[SyntaxSimulationAncestor" modifiers="1" timestamp="1460198944848"/>
 </typeInfoHistroy>

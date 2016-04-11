@@ -16,5 +16,4 @@ INDEX VERSION 1.127+D:\projekts\git\thesis\.metadata\.plugins\org.eclipse.jdt.co
 3104682415.index
 1155594363.index
 3883842682.index
-1737756342.index
 4051341462.index
